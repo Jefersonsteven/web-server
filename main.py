@@ -1,7 +1,9 @@
+from icecream import ic
 import store
 
 def run():
-    store.get_categories()
+    categories = store.get_categories()
+    ic(categories)
     
 if __name__ == '__main__':
     run()
