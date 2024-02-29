@@ -1,0 +1,8 @@
+# el archivo docker-compose.yml es el archivo de configuración de la aplicación
+
+# declarar la configuración de la aplicación
+services: # servicios que se van a utilizar
+  web-server: # nombre del servicio
+    build: # configuración de la imagen
+      context: . # contexto de la imagen
+      dockerfile: Dockerfile # archivo Dockerfile
