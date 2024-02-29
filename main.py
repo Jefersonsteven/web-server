@@ -1,9 +1,7 @@
 from icecream import ic
-import store
-
-def run():
-    categories = store.get_categories()
-    ic(categories)
+from server import app
     
 if __name__ == '__main__':
-    run()
+    import uvicorn
+    uvicorn.run(app, host="3002")
+    ic("Running server... in port 3002 🐍👨🏾‍💻")
