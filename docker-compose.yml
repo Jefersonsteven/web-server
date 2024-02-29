@@ -6,3 +6,7 @@ services: # servicios que se van a utilizar
     build: # configuración de la imagen
       context: . # contexto de la imagen
       dockerfile: Dockerfile # archivo Dockerfile
+    volumes:
+      - .:/app # mapeo de volúmenes, para que los cambios en el código se reflejen en el contenedor
+    ports:
+      - "8000:8000" # mapeo de puertos, para que el contenedor sea accesible desde el host

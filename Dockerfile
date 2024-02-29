@@ -17,5 +17,5 @@ RUN pip install --no-cache-dir --upgrade -r /app-web-service/requirements.txt
 COPY . /app-web-service
 
 # CMD proporciona valores predeterminados para un contenedor en ejecución
-# En este caso, se crea un bucle infinito para mantener el contenedor en ejecución
-CMD bash -c "while true; do sleep 1; done"
+# En este caso, se ejecuta el comando para iniciar el servidor de la aplicación
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
